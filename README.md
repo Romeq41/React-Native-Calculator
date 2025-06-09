@@ -5,7 +5,7 @@
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/yourusername/react-native-calculator.git
+   git clone https://github.com/Romeq41/react-native-calculator.git
    cd react-native-calculator
    ```
 
