@@ -3,7 +3,7 @@
     "name": "react-native-calculator",
     "slug": "react-native-calculator",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "reactnativecalculator",
     "userInterfaceStyle": "automatic",

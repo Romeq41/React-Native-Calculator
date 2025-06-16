@@ -2,16 +2,22 @@ import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+/**
+ * Ekran informacyjny aplikacji kalkulatora
+ */
 export default function AboutScreen() {
+    // Hook nawigacji
     const router = useRouter();
 
     return (
         <View style={styles.container}>
             <StatusBar style="light" />
+
             <View style={styles.header}>
                 <Text style={styles.title}>About This App</Text>
             </View>
 
+            {/* Przewijalna zawartość */}
             <ScrollView style={styles.content}>
                 <Text style={styles.heading}>Calculator App</Text>
                 <Text style={styles.version}>Version 1.0</Text>
@@ -42,6 +48,7 @@ export default function AboutScreen() {
                 </Text>
             </ScrollView>
 
+            {/* Stopka z przyciskiem powrotu */}
             <View style={styles.footer}>
                 <TouchableOpacity
                     style={styles.button}

@@ -5,6 +5,8 @@
 
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
+export const error = 'rgba(255, 59, 48, 0.9)';
+export const success = 'rgba(52, 199, 89, 0.9)';
 
 export const Colors = {
   light: {

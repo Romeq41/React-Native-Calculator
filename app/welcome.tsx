@@ -2,19 +2,25 @@ import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+/**
+ * Ekran powitalny
+ */
 export default function WelcomeScreen() {
+    // Hook nawigacji Expo Router
     const router = useRouter();
 
     return (
         <View style={styles.container}>
             <StatusBar style="light" />
 
-
             <View style={styles.content}>
+
                 <Text style={styles.title}>Calculator App</Text>
+
                 <Text style={styles.subtitle}>Simple. Fast. Reliable.</Text>
 
                 <View style={styles.buttonContainer}>
+                    {/* Główny przycisk - przejście do kalkulatora */}
                     <TouchableOpacity
                         style={styles.button}
                         onPress={() => router.push('/')}
@@ -22,6 +28,7 @@ export default function WelcomeScreen() {
                         <Text style={styles.buttonText}>Go to Calculator</Text>
                     </TouchableOpacity>
 
+                    {/* Przycisk drugorzędny - sekcja About */}
                     <TouchableOpacity
                         style={[styles.button, styles.secondaryButton]}
                         onPress={() => router.push('/about')}
@@ -35,10 +42,12 @@ export default function WelcomeScreen() {
 }
 
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
         backgroundColor: '#000',
     },
+
     background: {
         position: 'absolute',
         left: 0,
@@ -46,27 +55,32 @@ const styles = StyleSheet.create({
         top: 0,
         bottom: 0,
     },
+
     content: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
         padding: 20,
     },
+
     title: {
         fontSize: 36,
         fontWeight: 'bold',
         color: 'white',
         marginBottom: 10,
     },
+
     subtitle: {
         fontSize: 18,
         color: '#ccc',
         marginBottom: 40,
     },
+
     buttonContainer: {
         width: '100%',
         maxWidth: 300,
     },
+
     button: {
         backgroundColor: '#FF9F0A',
         borderRadius: 30,
@@ -75,11 +89,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 15,
     },
+
     secondaryButton: {
         backgroundColor: 'transparent',
         borderWidth: 1,
         borderColor: '#FF9F0A',
     },
+
     buttonText: {
         color: 'white',
         fontSize: 18,
